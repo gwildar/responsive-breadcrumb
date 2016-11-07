@@ -1,0 +1,25 @@
+$Breadcrumb-color: #ddd;
+$Breadcrumb-separator: '/';
+$Breadcrumb-min-width: 50px;
+$Breadcrumb-padding: 0 5px;
+
+.Breadcrumb {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  min-width: 0; // this allows items to shrink less than initial size
+  padding: 0;
+  list-style: none;
+}
+
+.Breadcrumb-item {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: $Breadcrumb-min-width; // this allows items to shrink less than initial size
+  + li:before {
+    content: "#{$Breadcrumb-separator}";
+    padding: $Breadcrumb-padding;
+    color: $Breadcrumb-color;
+  }
+}

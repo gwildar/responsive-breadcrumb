@@ -1,0 +1,19 @@
+.Breadcrumb {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  padding: 0;
+  list-style: none; }
+
+.Breadcrumb-item {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 50px; }
+  .Breadcrumb-item + li:before {
+    content: "/";
+    padding: 0 5px;
+    color: #ddd; }
+
+/*# sourceMappingURL=styles.css.map */
